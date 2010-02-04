@@ -82,4 +82,13 @@ for i in range(iterations):
     if clarksWins > knuthsWins:
         myTotalWins += 1
 
-print("Total wins: ", myTotalWins, "/", iterations, ".", " (", (myTotalWins/iterations) * 100, "%)", sep='')
+winRatio = (myTotalWins/iterations) * 100 # %
+
+print("Total wins: ", myTotalWins, "/", iterations, ".", " (", winRatio, "%)", sep='')
+
+if winRatio < 50:
+    print("Knuth beat me :(")
+elif winRatio > 50:
+    print("I beat Knuth :)")
+else:
+    print("Well, that sucks. We tied. BOOORING. With interesting mathematical implications...")
